@@ -1,5 +1,6 @@
 # **Understanding Diffusion MRI** 
 
+
 ### Feature Extraction through Code Exploration
 
 Imagine you have just started a new position in a neuroscience or medical imaging lab. Your supervisor gives you a dataset containing raw diffusion MRI (dMRI) scans from patients diagnosed with either **Multiple Sclerosis (MS)** or **Alzheimer’s Disease**. Your task is to prepare this data for **machine learning**, but you have never worked with diffusion MRI before.
@@ -68,6 +69,7 @@ Your goal is to thoroughly understand both notebooks, line by line. This involve
 
 
 
+<img width="1134" height="547" alt="dwti5" src="https://github.com/user-attachments/assets/d98c2f82-9275-4fe2-a564-eef4336536ae" />
 
 
-![dwti5.png](attachment:dwti5.png)
+
