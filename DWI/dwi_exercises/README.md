@@ -10,6 +10,8 @@ To begin, you locate **two Jupyter notebooks** on GitHub:
 1. **`01_dwi_exploration.ipynb`** – A tutorial demonstrating how to load, visualize, and model dMRI data from a single subject.  
 2. **`02_feature_engineering.ipynb`** – A pipeline that preprocesses the data, performs tractography, and extracts quantitative features (e.g., FA profiles, tract lengths).
 
+<img width="1134" height="547" alt="dwti5" src="https://github.com/user-attachments/assets/f2a33ea1-5663-4eaf-afae-fe1b35c1fa54" />
+
 ---
 
 ## The Exercise
@@ -69,7 +71,6 @@ Your goal is to thoroughly understand both notebooks, line by line. This involve
 
 
 
-<img width="1134" height="547" alt="dwti5" src="https://github.com/user-attachments/assets/d98c2f82-9275-4fe2-a564-eef4336536ae" />
 
 
 
