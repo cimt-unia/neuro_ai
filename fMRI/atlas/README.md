@@ -2,7 +2,7 @@
 **ROI Functional Annotation Guide**
 
 This atlas combines:
-- **Cortical regions**: [HCP-MMP1.0](https://doi.org/10.1038/nature18933) (Glasser et al., 2016)  
+- **Cortical regions**: [HCP-MMP1.0](https://doi.org/10.1038/nature18933)
 - **Subcortical regions**: [Tian et al. (2020)](https://www.nature.com/articles/s41593-020-00711-6)
 
 Each ROI is annotated with:
