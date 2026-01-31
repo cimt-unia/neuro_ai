@@ -34,7 +34,7 @@ In EEG, the signal is **voltage** (electrical pressure) measured at your scalp, 
 
 
 
-<img width="324" height="399" alt="image" src="https://github.com/user-attachments/assets/26a0a9da-e387-45b3-b486-a5bc028377bd" />
+<img width="660" height="319" alt="image" src="https://github.com/user-attachments/assets/828492d2-9bfe-4076-9e41-0db406f7a932" />
 
 
 
@@ -44,13 +44,11 @@ Your brain is made of **neurons** (nerve cells). When a neuron "fires," it lets 
 - But **millions firing together** in sync? That creates a small electric field that reaches your scalp.
 
 
-
-
 This voltage is **microscopic**: about **10 to 100 microvolts (µV)**.  
 For comparison: a AA battery is **1,500,000 µV**. So brain signals are **1/15,000th** of a battery!
 
 That’s why EEG is so sensitive—and so easily polluted by noise.
-
+[**Action Potential**](https://www.youtube.com/watch?v=oa6rvUJlg7o)
 
 
 <br>
@@ -62,19 +60,41 @@ That’s why EEG is so sensitive—and so easily polluted by noise.
 
 ### **Part 2: What We Record?**
 
-<img width="660" height="319" alt="image" src="https://github.com/user-attachments/assets/828492d2-9bfe-4076-9e41-0db406f7a932" />
-
-An **EEG electrode** is a small metal disc stuck to your scalp with conductive gel.
-
-- It doesn’t *send* electricity—it only *listens*.
-- It measures the **difference in voltage** between itself and another point (the “reference”).
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/2502727e-44b0-4b39-a958-2adaf72c24ce" />
 
 
 
-But here’s the catch: **you always need two points** to measure voltage. So every EEG channel is really:  
-**Electrode A – Reference Electrode**
+#### 1. **Why Skull Matters**
+- The **skull is a strong low-pass filter**: it smears and weakens fast, high-frequency signals.
+- Scalp EEG sees only the “tip of the iceberg”—large, synchronized cortical patches.
+- iEEG bypasses the skull → sees **local, fast, and deep** activity.
 
-> Imagine two water tanks connected by a pipe. You don’t care how full each is—you care about the **difference in water level**. That difference makes water flow. Similarly, EEG measures **voltage differences**.
+#### 2. **What Generates the Signal?**
+- Only **pyramidal neurons** (aligned perpendicular to the scalp) produce dipoles strong enough to be recorded.
+- Their **postsynaptic potentials** (not action potentials!) summate over ~50,000+ neurons to create measurable fields.
+- This is why EEG reflects **input processing**, not output firing.
+
+#### 3. **When Do We Use iEEG?**
+- When scalp EEG **can’t localize** the seizure focus (e.g., deep temporal lobe).
+- When surgery is planned, and we need to **map eloquent cortex** (speech, motor areas) to avoid damage.
+- SEEG (stereotactic EEG) uses **depth electrodes** to probe deep structures like the hippocampus—something scalp EEG cannot do reliably.
+
+
+#### Three Main Approaches Compared
+
+| Feature | **Scalp EEG** | **Intracranial EEG (iEEG)** | 
+|--------|----------------|-------------------------------|
+| **Invasiveness** | Non-invasive (electrodes on skin) | Invasive (surgery required) | 
+| **Electrode Placement** | On scalp using 10–20/10–10 system | Directly on cortex (ECoG grids) or deep in brain (SEEG depth electrodes) | 
+| **What It Records** | Volume-conducted, spatially blurred signals from **superficial cortical pyramidal neurons** (synchronized postsynaptic potentials) | **Local field potentials** from small neuron populations; captures high-frequency activity (e.g., gamma, HFOs) | 
+| **Spatial Resolution** | Low (~1–3 cm); blurred by skull/scalp | Very high (<1 cm); can resolve single gyri or nuclei | 
+| **Temporal Resolution** | Excellent (sub-millisecond) | Excellent (sub-millisecond) | Excellent |
+| **Frequency Range** | Best for <70 Hz (alpha, beta, etc.); attenuates high frequencies | Captures up to 200+ Hz (including high-frequency oscillations, HFOs) |
+| **Primary Use** | Epilepsy screening, sleep studies, cognitive research, coma assessment | Pre-surgical mapping for drug-resistant epilepsy; research on memory, language 
+| **Duration** | Minutes to days (ambulatory) | Days to weeks (inpatient monitoring) | 
+
+---
+[**Introduction to EEG:**](https://www.youtube.com/watch?v=T7MKlPYiL48&t=385s)
 
 
 
