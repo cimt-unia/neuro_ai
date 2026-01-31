@@ -1,6 +1,9 @@
-# Machine Learning on Resting-State fMRI Connectivity — A General Workflow
+# Machine Learning on Resting-State fMRI Connectivity
 
-This toy example demonstrates the **standard pipeline for applying machine learning to resting-state functional MRI (rs-fMRI) data** to study brain connectivity. It is designed to help students understand how neuroimaging data is transformed into a format suitable for classification or regression tasks—**without focusing on any specific disorder**.
+<img width="448" height="371" alt="fMRI - Neuro AI" src="https://github.com/user-attachments/assets/3e139f24-034f-47a5-9d3a-f97a6694b288" />
+
+
+This example demonstrates the **standard pipeline for applying machine learning to resting-state functional MRI (rs-fMRI) data** to study brain connectivity. It is designed to help students understand how neuroimaging data is transformed into a format suitable for classification or regression tasks—**without focusing on any specific disorder**.
 
 
 
