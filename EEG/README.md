@@ -48,7 +48,8 @@ This voltage is **microscopic**: about **10 to 100 microvolts (µV)**.
 For comparison: a AA battery is **1,500,000 µV**. So brain signals are **1/15,000th** of a battery!
 
 That’s why EEG is so sensitive—and so easily polluted by noise.
-[**Action Potential**](https://www.youtube.com/watch?v=oa6rvUJlg7o)
+
+**VIDEO:** [**Neuronal electrophysiology**](https://www.youtube.com/watch?v=oa6rvUJlg7o)
 
 
 <br>
@@ -94,7 +95,7 @@ That’s why EEG is so sensitive—and so easily polluted by noise.
 | **Duration** | Minutes to days (ambulatory) | Days to weeks (inpatient monitoring) | 
 
 ---
-[**Introduction to EEG:**](https://www.youtube.com/watch?v=T7MKlPYiL48&t=385s)
+**VIDEO:** [**Introduction to EEG**](https://www.youtube.com/watch?v=T7MKlPYiL48&t=385s)
 
 
 
