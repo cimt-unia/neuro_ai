@@ -1,13 +1,13 @@
 # Machine Learning on Resting-State fMRI Connectivity
 
+
 <img width="448" height="371" alt="fMRI - Neuro AI" src="https://github.com/user-attachments/assets/3e139f24-034f-47a5-9d3a-f97a6694b288" />
 
+<br>
 
-This example demonstrates the **standard pipeline for applying machine learning to resting-state functional MRI (rs-fMRI) data** to study brain connectivity. It is designed to help students understand how neuroimaging data is transformed into a format suitable for classification or regression tasks—**without focusing on any specific disorder**.
+This example demonstrates the **standard pipeline for applying machine learning to resting-state functional MRI (rs-fMRI) data** to study brain connectivity. 
 
-
-
----
+<br>
 
 ## 1. Resting-State fMRI (rs-fMRI) Basics
 - Participants lie quietly in the scanner with eyes closed (or fixated), **not performing any task**.
@@ -15,7 +15,8 @@ This example demonstrates the **standard pipeline for applying machine learning 
 - These fluctuations reflect **intrinsic functional networks**—brain regions that "talk" to each other even at rest.
 - Data are typically acquired using **echo-planar imaging (EPI)**, which enables fast whole-brain coverage.
 
----
+<br>
+
 
 ## 2. From Brain Images to Features
 
@@ -46,7 +47,8 @@ For each subject, the average BOLD time series is extracted from each ROI.
 - Stack all subjects’ vectors into a **design matrix** of shape *(N subjects × F features)*.
   - Example: 40 subjects × 2,016 features.
 
----
+<br>
+
 
 ## 3. Machine Learning Pipeline
 
