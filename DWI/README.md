@@ -1,5 +1,6 @@
 # **Understanding Diffusion MRI** 
 
+<br>
 
 ### Feature Extraction through Code Exploration
 
@@ -12,7 +13,9 @@ To begin, you locate **two Jupyter notebooks** on GitHub:
 
 <img width="1134" height="547" alt="dwti5" src="https://github.com/user-attachments/assets/f2a33ea1-5663-4eaf-afae-fe1b35c1fa54" />
 
----
+
+
+<br>
 
 ## The Exercise
 
@@ -68,6 +71,7 @@ Your goal is to thoroughly understand both notebooks, line by line. This involve
     (e.g., tractography as a proxy for anatomy, reliability of CSD in resolving crossings).
   - Potential improvements for real research workflows  
     (e.g., automated bundle extraction, scaling to BIDS datasets, adding motion correction).
+
 
 
 
