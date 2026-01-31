@@ -309,7 +309,7 @@ These standardized systems link scalp electrode positions to underlying brain fu
 
 
 
-<img width="1000" height="793" alt="image" src="https://github.com/user-attachments/assets/f039672f-48b7-4a0e-a09b-c37554e2fb3c" />
+<img width="800" height="593" alt="image" src="https://github.com/user-attachments/assets/f039672f-48b7-4a0e-a09b-c37554e2fb3c" />
 
 
 
