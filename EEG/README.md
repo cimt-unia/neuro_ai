@@ -1,6 +1,7 @@
 # **EEG Signal Theory** 
 
 
+<img width="419" height="386" alt="image" src="https://github.com/user-attachments/assets/b815fe70-ab9c-4c5f-b3b4-1a24ea341e95" />
 
 
 
@@ -18,6 +19,9 @@ A **signal** is just a **measurement that changes over time**.
 
 In EEG, the signal is **voltage** (electrical pressure) measured at your scalp, changing **thousands of times per second**.
 
+
+
+
 -----------------------------------------
 
 
@@ -30,11 +34,16 @@ In EEG, the signal is **voltage** (electrical pressure) measured at your scalp, 
 
 
 
+<img width="324" height="399" alt="image" src="https://github.com/user-attachments/assets/26a0a9da-e387-45b3-b486-a5bc028377bd" />
+
+
 
 Your brain is made of **neurons** (nerve cells). When a neuron "fires," it lets charged particles (ions like Na⁺, K⁺) flow in and out. This creates a tiny **electric current**.
 
 - One neuron = too weak to measure.
 - But **millions firing together** in sync? That creates a small electric field that reaches your scalp.
+
+
 
 
 This voltage is **microscopic**: about **10 to 100 microvolts (µV)**.  
@@ -52,6 +61,8 @@ That’s why EEG is so sensitive—and so easily polluted by noise.
 
 
 ### **Part 2: How Do We Record It? (The Electrode)**
+
+<img width="660" height="319" alt="image" src="https://github.com/user-attachments/assets/828492d2-9bfe-4076-9e41-0db406f7a932" />
 
 An **EEG electrode** is a small metal disc stuck to your scalp with conductive gel.
 
@@ -72,6 +83,8 @@ But here’s the catch: **you always need two points** to measure voltage. So ev
 
 
 ### **Part 3: What Is Sampling Rate?**
+
+<img width="1000" height="349" alt="image" src="https://github.com/user-attachments/assets/aa901358-6af8-4314-8837-5560e32fa42a" />
 
 
 Voltage is **continuous**, but computers only understand **numbers**—discrete snapshots.
@@ -108,7 +121,8 @@ In your case: **600 ÷ 2 ≈ 300 Hz**.
 
 ### **Part 4: What Is a Fourier Transform?** 
 
-#### The Big Idea:
+<img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/dc232320-1046-4243-87fb-cf091e48868f" />
+
 Your EEG signal is a **messy mix** of many rhythms happening at once:
 - Slow delta (sleep)
 - Medium alpha (relaxation)
@@ -119,13 +133,6 @@ The **Fourier Transform** answers:
 
 - We use **power** (energy) at each frequency.
 
-### Power Spectral Density (PSD)
-This is just a **graph** showing:
-- **X-axis**: Frequency (Hz) → how fast the wave wiggles
-- **Y-axis**: Power (µV²/Hz) → how strong that rhythm is
-
-The **60 Hz spike**? That’s not your brain—it’s your **wall outlet**! Electrical systems in North America vibrate at 60 Hz, and your electrodes pick it up like an antenna.
-
 
 <br>
 
@@ -133,6 +140,9 @@ The **60 Hz spike**? That’s not your brain—it’s your **wall outlet**! Elec
 
 
 ### **Part 5: Filtering — Cleaning the Signal**
+
+<img width="624" height="344" alt="image" src="https://github.com/user-attachments/assets/2da9dce4-e246-4cba-9430-65a811fd4e0f" />
+
 
 #### Why Filter?
 
@@ -155,6 +165,8 @@ We use **filters** to keep only the frequencies we care about.
 
 
 ### **Part 6: Re-referencing — Choosing Your “Zero”**
+
+<img width="300" height="308" alt="image" src="https://github.com/user-attachments/assets/4f227d43-cdb8-458a-b83b-99057b327c74" />
 
 Remember: EEG measures **differences**, not absolute voltage.
 
@@ -181,6 +193,9 @@ This often **cancels out noise** that affects all electrodes equally (like dista
 
 
 ### **Part 7: Bad Channels — The Broken Microphones**
+
+<img width="600" height="304" alt="image" src="https://github.com/user-attachments/assets/9f60037b-5f98-4b2a-a77c-5aaee280f4c6" />
+
 
 Sometimes an electrode isn’t touching well (hair, dry gel). It might:
 - Show a **flat line** (no signal)
@@ -214,6 +229,8 @@ Your EEG isn’t just brain. It’s a **mix** of:
 All mixed together at every electrode.
 
 #### What ICA Does:
+<img width="500" height="281" alt="image" src="https://github.com/user-attachments/assets/9fcc782f-2328-4dfc-8add-b259ca467cdf" />
+
 ICA says:  
 > “Suppose this combination was made by mixing a few pure ingredients. Can I reverse-engineer what those ingredients were?”
 
@@ -221,11 +238,10 @@ It finds **independent components**—patterns that:
 - Have consistent spatial shape (topography)
 - Vary independently over time
 
-#### How It Finds Eye Blinks:
-- Eye blinks create a strong positive voltage at forehead electrodes, negative at back.
-- This makes a **front-heavy topographic map**.
-- The time course shows **sharp upward spikes** every few seconds.
-- It also **correlates perfectly** with the EOG channel (placed near the eye).
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/ed7bc19e-0d93-49cb-b0ae-973c744c123f" />
+
+<img width="590" height="390" alt="image" src="https://github.com/user-attachments/assets/a4abb460-f54e-4a05-b60a-9dbe2fd16473" />
+
 
 
 
