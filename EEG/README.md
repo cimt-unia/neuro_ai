@@ -60,7 +60,7 @@ That’s why EEG is so sensitive—and so easily polluted by noise.
 
 
 
-### **Part 2: How Do We Record It? (The Electrode)**
+### **Part 2: What We Record?**
 
 <img width="660" height="319" alt="image" src="https://github.com/user-attachments/assets/828492d2-9bfe-4076-9e41-0db406f7a932" />
 
