@@ -264,6 +264,16 @@ It finds **independent components**—patterns that:
 - Have consistent spatial shape (topography)
 - Vary independently over time
 
+```
+# After ICA, interpolate 
+cleaned = ica.apply(raw)
+if bads:
+    cleaned.info['bads'] = bads
+    cleaned.interpolate_bads(reset_bads=True)
+    print(f"Interpolated {len(bads)} bad channels")
+```
+
+
 <br>
 
 
