@@ -47,7 +47,7 @@ Your brain is made of **neurons** (nerve cells). When a neuron "fires," it lets 
 This voltage is **microscopic**: about **10 to 100 microvolts (µV)**.  
 For comparison: a AA battery is **1,500,000 µV**. So brain signals are **1/15,000th** of a battery!
 
-That’s why EEG is so sensitive—and so easily polluted by noise.
+That’s why EEG is so sensitive and so easily polluted by noise.
 
 **VIDEO:** [**Neuronal electrophysiology**](https://www.youtube.com/watch?v=oa6rvUJlg7o)
 
