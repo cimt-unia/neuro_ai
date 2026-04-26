@@ -128,12 +128,12 @@ Because brain waves wiggle **fast**!
 ### The Nyquist Theorem:
 > **You cannot accurately record a wave that wiggles faster than half your sampling rate.**
 
-- If you sample at **600 Hz**, the fastest wave you can record is **300 Hz**.
+- If you sample at **500 Hz**, the fastest wave you can record is **250 Hz**.
 - Any real wave faster than 300 Hz will **trick** your system into looking like a slower wave. This is called **aliasing**.
 
 
 So: **Nyquist frequency = sampling rate ÷ 2**.  
-In your case: **600 ÷ 2 ≈ 300 Hz**.
+In our case: **500 ÷ 2 ≈ 250 Hz**.
 
 
 <br>
