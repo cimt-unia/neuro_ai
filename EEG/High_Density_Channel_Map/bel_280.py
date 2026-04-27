@@ -1,7 +1,23 @@
-# bel_280.py
-"""
-Utilities for handling BEL EEG System One channel naming and geometry.
-"""
+# ────────────────────────────────────────────────
+# STANDARDIZE MONTAGE FOR BEL 280-CHANNEL SYSTEM (optional but recommended)
+# ────────────────────────────────────────────────
+
+'''
+# Example: EGI exports channels as '1', '2', ..., '257' + reference
+rename_map = {str(i): f'E{i}' for i in range(1, 281)}
+rename_map['REF CZ'] = 'Cz'  # Map reference to Cz
+
+# Apply renaming
+raw.rename_channels(rename_map)
+
+# Apply montage from BEL .gpsc file
+channels = bel_280.parse_gpsc("ghw280_from_egig.gpsc")
+montage = bel_280.create_montage_from_gpsc(channels)
+raw.set_montage(montage, on_missing="warn")
+'''
+
+
+
 from pathlib import Path
 from typing import List, Tuple, Dict, Optional
 import numpy as np
