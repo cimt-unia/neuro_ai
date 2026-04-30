@@ -153,8 +153,7 @@ Remove impulsive noise and smooth signals while preserving morphological feature
 Illustrate filtering as a convolution operation in the time domain.
 
 ### Theory
-$$ y[n] = x[n] * h[n] = \sum_{k} h[k] \cdot x[n-k] $$
-In the frequency domain, this corresponds to multiplication: $Y(f) = H(f) \cdot X(f)$.
+https://jinglescode.github.io/2020/11/01/how-convolutional-layers-work-deep-learning-neural-networks/
 
 ### Kernels Demonstrated
 1.  **Box (Rectangular):** Equal weights. Simple moving average.
