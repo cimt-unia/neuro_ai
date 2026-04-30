@@ -65,10 +65,14 @@ Reduce the sampling rate from 500 Hz to 250 Hz to decrease computational load wh
 *   **Aliasing Prevention:** Naive subsampling causes high-frequency content to fold back into the lower spectrum. Anti-aliasing low-pass filtering must precede downsampling.
 
 ### Implementation
-*   **Function:** `scipy.signal.decimate`
-*   **Factor ($q$):** 2
-*   **Filter Type:** IIR (Chebyshev Type I).
-*   **Phase Handling:** `zero_phase=True` ensures no temporal shift in event markers.
+The `scipy.signal.decimate` function is used to **downsample a signal by an integer factor** after applying an anti-aliasing lowpass filter to prevent distortion. By default, it uses an **order 8 Chebyshev Type I IIR filter**, but can also use a **30-point FIR filter** with a Hamming window if `ftype='fir'` is specified.
+
+Key parameters include:
+*   **`x`**: The input signal array.
+*   **`q`**: The downsampling factor (integer). For factors greater than 13, it is recommended to call the function multiple times.
+*   **`n`**: The filter order, defaulting to 8 for IIR and 20 times `q` for FIR.
+*   **`ftype`**: Specifies the filter type (`'iir'` or `'fir'`).
+*   **`zero_phase`**: When `True` (default in recent versions), it prevents phase shift by filtering in both directions (IIR) or shifting outputs (FIR).
 
 ---
 
