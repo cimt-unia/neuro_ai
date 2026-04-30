@@ -5,6 +5,10 @@
 **Original Sampling Rate ($F_s$):** 500 Hz  
 **Target Sampling Rate:** 250 Hz  
 
+<img width="660" height="635" alt="image" src="https://github.com/user-attachments/assets/ef4ef1a6-d455-44d1-a839-596c4b1312f8" />
+
+
+
 **Download data:** https://drive.google.com/file/d/1_ndA6MLgOgADUKeEEPhcsA3mD3ox2ymz/view?usp=sharing
 
 ## Overview
