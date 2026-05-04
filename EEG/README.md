@@ -1,4 +1,4 @@
-# **EEG Signal Theory** 
+# **Introduction to Signal Processing in Neuroelectrophysiology** 
 
 
 <img width="419" height="386" alt="image" src="https://github.com/user-attachments/assets/b815fe70-ab9c-4c5f-b3b4-1a24ea341e95" />
