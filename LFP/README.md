@@ -137,7 +137,7 @@ Demonstrate the impact of phase delay and edge artifacts in filtering.
 
 ---
 
-## Section 5: Non-Linear Filtering: Median & Savitzky-Golay
+## Section 5: Non-Linear Filtering: Median & Savitzky-Golay (FIR)
 
 ### Objective
 Remove impulsive noise and smooth signals while preserving morphological features.
@@ -148,6 +148,7 @@ Remove impulsive noise and smooth signals while preserving morphological feature
     *   **Use Case:** Removal of "salt-and-pepper" spikes.
     *   **Property:** Non-linear; excellent edge preservation.
 2.  **Savitzky-Golay Filter:**
+https://en.wikipedia.org/wiki/Savitzky%E2%80%93Golay_filter#/media/File:Savitzky_golay_local_regression_wl045_pd04.gif
     *   **Mechanism:** Fits a local polynomial (least squares) within a sliding window.
     *   **Use Case:** Smoothing without distorting peak height/width.
     *   **Derivatives:** Can compute instantaneous slope (1st derivative) directly from the polynomial coefficients.
@@ -159,7 +160,7 @@ Remove impulsive noise and smooth signals while preserving morphological feature
 ### Objective
 Illustrate filtering as a convolution operation in the time domain.
 
-### Theory
+### Deep Learning Convolution
 https://jinglescode.github.io/2020/11/01/how-convolutional-layers-work-deep-learning-neural-networks/
 
 ### Kernels Demonstrated
