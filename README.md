@@ -7,6 +7,8 @@ This repository is a cross-modal toolbox for machine learning in computational n
 * **DWI:** signal exploration, tract-based feature engineering, and ML-ready extraction pipelines.
 * **EEG:** signal preprocessing introduction to cleaning EEG data using MNE sample dataset
 * **fMRI:** classical machine-learning and deep-learning examples using SVMs, MLPs, and transformers.
+* **LFP:** essential signal time series processing, filtering techniques, statistical normalization, and spectral analysis.
+
 
 Use this repository as a compact reference library to accelerate experimental design, compare analytical strategies, and extend workflows for your own datasets.
 
