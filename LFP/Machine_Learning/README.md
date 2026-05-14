@@ -14,10 +14,15 @@ You have a continuous neural signal. You want to classify brain states (e.g., "R
 
 **We need to extract *features*:** compact, meaningful numerical representations of the signal that capture its essential characteristics.
 
-<img width="511" height="455" alt="image" src="https://github.com/user-attachments/assets/84d5195a-a233-4c61-a2a0-0145bf98e1f9" />
+<br>
 
 
 ## Feature Extraction
+
+<img width="511" height="455" alt="image" src="https://github.com/user-attachments/assets/3bc71b89-a6f6-48dd-909c-9d129f50132c" />
+
+
+<br>
 
 When dealing with time-series signals, you generally have three options:
 
@@ -37,9 +42,23 @@ When dealing with time-series signals, you generally have three options:
 *   **Pros:** Captures complex time-frequency dynamics.
 *   **Cons:** Requires deep learning frameworks; computationally expensive; "black box" interpretation.
 
----
+<br>
+
+## Rules
+
+*   **Filtering is non-negotiable:** Never feed raw, unfiltered neural data into an ML model.
+*   **Epoch length matters:** Your epoch length dictates your frequency resolution. $Resolution = 1 / Duration$.
+*   **Features > Raw Data:** For tabular ML models, engineered features (like Band Power) often outperform raw data because they embed domain knowledge (neuroscience) into the model.
+*   **Stability is key:** A high accuracy score means nothing if the model relies on different features every time you shuffle the data. Always check feature stability.
+
+
+
+<br>
+
 
 ## Framework Example
+
+
 
 
 ### Step 1: Preprocessing (Cleaning the Signal)
@@ -78,9 +97,5 @@ Finally, we use **XGBoost** to classify the epochs based on their band powers.
 *   **Evaluation:** We check Accuracy, F1-Score, and AUC.
 *   **Stability Check:** A crucial step! We retrain the model 50 times with different random seeds. If a feature (e.g., "Beta Power") is important in *all* 50 runs, it is a **stable** biomarker. If it only appears occasionally, it might be noise.
 
-## Summary
-
-*   **Filtering is non-negotiable:** Never feed raw, unfiltered neural data into an ML model.
-*   **Epoch length matters:** Your epoch length dictates your frequency resolution. $Resolution = 1 / Duration$.
-*   **Features > Raw Data:** For tabular ML models, engineered features (like Band Power) often outperform raw data because they embed domain knowledge (neuroscience) into the model.
-*   **Stability is key:** A high accuracy score means nothing if the model relies on different features every time you shuffle the data. Always check feature stability.
+<br>
+<img src="https://github.com/user-attachments/assets/51590e07-d466-401e-abbc-8f9dc2bba881" width="40%" alt="Pipeline Overview">
