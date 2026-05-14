@@ -1,4 +1,5 @@
-# Feature Engineering in Signal Processing: From Raw Data to Machine Learning
+# Feature Engineering in Signal Processing: 
+From Raw Data to Machine Learning
 
 
 ## The Core Problem
