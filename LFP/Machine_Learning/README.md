@@ -1,4 +1,4 @@
-# Feature Engineering in Signal Processing: 
+# Feature Engineering in Signal Processing 
 From Raw Data to Machine Learning
 
 <img width="506" height="244" alt="image" src="https://github.com/user-attachments/assets/d22363df-fd37-45a1-bf75-cd08b49d8eab" />
