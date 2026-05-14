@@ -225,7 +225,6 @@ Analyze time-frequency dynamics to observe *when* spectral changes occur.
 1.  **Smoothing:** 2D Gaussian filtering applied to the spectrogram matrix to reduce visual noise.
 2.  **Log Scale:** Conversion to Decibels (dB) for better dynamic range visualization.
 3.  **Differential Spectrogram:**
-    $$ Sxx_{diff} = Sxx_{move} - Sxx_{rest} $$
     *   **Blue:** Significant power decrease (ERD).
     *   **Red:** Significant power increase (ERS).
 
