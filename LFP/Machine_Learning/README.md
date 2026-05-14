@@ -1,6 +1,8 @@
 # Feature Engineering in Signal Processing: 
 From Raw Data to Machine Learning
 
+<img width="506" height="244" alt="image" src="https://github.com/user-attachments/assets/d22363df-fd37-45a1-bf75-cd08b49d8eab" />
+
 
 ## The Core Problem
 
@@ -11,6 +13,9 @@ You have a continuous neural signal. You want to classify brain states (e.g., "R
 3.  **Lack of Interpretability:** A single voltage point tells you little about the underlying neural oscillation.
 
 **We need to extract *features*:** compact, meaningful numerical representations of the signal that capture its essential characteristics.
+
+<img width="511" height="455" alt="image" src="https://github.com/user-attachments/assets/84d5195a-a233-4c61-a2a0-0145bf98e1f9" />
+
 
 ## Feature Extraction
 
