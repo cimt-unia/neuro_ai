@@ -17,8 +17,8 @@ For research into non-stationary brain rhythms (e.g., *Opposing Cortical Forces*
 ---
 
 ### Sources
-[1] [BciPy GitHub Repository](https://github.com/bcipy/bcipy) - [Open-source library for ERP-based BCI experiments and data acquisition]
-[2] [PyBCI Documentation](https://github.com/alexandrebarachant/pybci) - [Real-time BCI framework integrating LSL and machine learning]
-[3] [Wyrm Toolbox](https://github.com/bbci/wyrm) - [Toolbox for online/offline BCI experiments and competition datasets]
-[4] [MNE-Python Official Site](https://mne.tools/stable/index.html) - [Standard library for EEG/MEG preprocessing and analysis]
-[5] [SciPy Signal Processing Module](https://docs.scipy.org/doc/scipy/reference/signal.html) - [Tools for filtering, spectral estimation, and windowing]
+- [1] [BciPy GitHub Repository](https://github.com/bcipy/bcipy) - [Open-source library for ERP-based BCI experiments and data acquisition]
+- [2] [PyBCI Documentation](https://github.com/alexandrebarachant/pybci) - [Real-time BCI framework integrating LSL and machine learning]
+- [3] [Wyrm Toolbox](https://github.com/bbci/wyrm) - [Toolbox for online/offline BCI experiments and competition datasets]
+- [4] [MNE-Python Official Site](https://mne.tools/stable/index.html) - [Standard library for EEG/MEG preprocessing and analysis]
+- [5] [SciPy Signal Processing Module](https://docs.scipy.org/doc/scipy/reference/signal.html) - [Tools for filtering, spectral estimation, and windowing]
