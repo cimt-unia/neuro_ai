@@ -1,4 +1,5 @@
 # BCI Introduction
+<img width="360" height="184" alt="image" src="https://github.com/user-attachments/assets/1f6273a7-d743-45c6-988f-92de3173c17b" />
 
 
 ## Libraries
@@ -11,8 +12,9 @@
 
 ## Ideas
 ### Extended Kalman Filters:
-[Opposing cortical forces: Alpha slowing and sensorimotor mu acceleration during motor-related BCI training](https://doi.org/10.1371/journal.pcbi.1014112) - [Study demonstrating the use of EKF for tracking dynamic brain rhythms] 
-For research into non-stationary brain rhythms (e.g., *Opposing Cortical Forces*), standard static bandpower features may be insufficient. Researchers can implement **Extended Kalman Filters (EKF)** using **[FilterPy](https://filterpy.readthedocs.io/)** to track instantaneous frequency and magnitude shifts during training sessions [6].
+[Opposing cortical forces: Alpha slowing and sensorimotor mu acceleration during motor-related BCI training](https://doi.org/10.1371/journal.pcbi.1014112) 
+**[FilterPy](https://filterpy.readthedocs.io/)** to track instantaneous frequency and magnitude shifts during training sessions
+
 
 ---
 
