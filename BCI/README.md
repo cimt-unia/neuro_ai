@@ -24,3 +24,6 @@
 
 <br>
 
+### Sources
+[1] [BciPy: Brain-Computer Interface Software in Python](https://github.com/CAMBI-tech/BciPy) - [Details BciPy's focus on ERP spellers and its v2.0.0 release status]
+[2] [MNE-LSL - MNE-Python](https://mne.tools/mne-lsl/) - [Official documentation for the real-time LSL streaming framework used for custom pipelines]
