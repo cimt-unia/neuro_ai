@@ -1,7 +1,7 @@
 # BCI Introduction
 <img width="360" height="184" alt="image" src="https://github.com/user-attachments/assets/1f6273a7-d743-45c6-988f-92de3173c17b" />
 
-This repository outlines the current state-of-the-art Python libraries for Brain-Computer Interface (BCI) research in 2026, with a specific focus on real-time experimental control and high-density EEG integration.
+This repository outlines the current state-of-the-art Python libraries for Brain-Computer Interface (BCI) research, with a specific focus on real-time experimental control and high-density EEG integration.
 
 ## Core Libraries and Frameworks
 
