@@ -4,9 +4,9 @@
 
 ## Libraries
 
-*   **[BciPy](https://github.com/bcipy/bcipy)**: An open-source, modular library designed for conducting BCI experiments, particularly focusing on **ERP spelling interfaces** (like RSVP and Matrix Speller) and communication restoration. It supports data acquisition, signal processing, and GUI-based task building on Windows, Linux, and macOS [1].
-*   **[PyBCI](https://github.com/alexandrebarachant/pybci)**: A package for creating real-time BCIs that handles data synchronization and pipelining via the **Lab Streaming Layer (LSL)**. It integrates with machine learning libraries like **PyTorch**, **scikit-learn**, and **TensorFlow**, leveraging **AntroPy**, **SciPy**, and **NumPy** for feature extraction [2].
-*   **[Wyrm](https://github.com/bbci/wyrm)**: A toolbox suitable for both online BCI experiments and offline EEG data analysis, offering examples for motor imagery classification and P300 Matrix Speller tasks using BCI Competition datasets [3].
+
+*   **[BciPy](https://github.com/CAMBI-tech/BciPy)**: The most professionally maintained library for research-grade BCIs, with a major **v2.0.0 release in August 2025**. It is the "gold standard" for **ERP-based communication** (such as P300 RSVP and Matrix Spellers) and clinical trials. However, its rigid "Inquiry/Series/Trial" architecture makes it **unsuitable for continuous control tasks** like gaming or cursor movement [1].
+*   **[MNE-LSL](https://mne.tools/mne-lsl/)** (formerly MNE-Realtime): Part of the active MNE-Python ecosystem, this is the 2026 standard for **low-latency streaming** and synchronization via the Lab Streaming Layer (LSL). It is the ideal foundation for building **custom real-time pipelines** for Motor Imagery or Neurofeedback, allowing you to integrate your own classifiers for controlling apps or games [2].
 
 
 <br>
