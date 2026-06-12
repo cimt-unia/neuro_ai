@@ -18,6 +18,12 @@ This repository outlines the current state-of-the-art Python libraries for Brain
 *   **[BciPy](https://github.com/CAMBI-tech/BciPy)**: Maintained by the CAMBI consortium, BciPy is a comprehensive library designed for research-grade BCI experiments. Following its major v2.0.0 release in August 2025, it remains the standard for Event-Related Potential (ERP) paradigms, such as P300 RSVP and Matrix Spellers [1].
     *   *Limitation:* Due to its rigid "Inquiry/Series/Trial" architectural structure, BciPy is optimized for discrete communication tasks and is generally unsuitable for continuous control applications like gaming or smooth cursor navigation [1].
 
+## Hardware
+
+| Control Type | Best Band | Frequency | Brain Region | Suitable Hardware |
+| :--- | :--- | :--- | :--- | :--- |
+| **Directional/Discrete** | **Mu / Beta** | 8–30 Hz | Motor Cortex (C3, C4, Cz) | OpenBCI, Emotiv EPOC X |
+| **Continuous/Scalar** | **Beta / Alpha** | 8–25 Hz | Prefrontal (FP1, FP2, AF7, AF8) | Muse 2, NeuroSky, Emotiv Insight |
 ---
 
 ### Research References
