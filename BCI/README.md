@@ -28,7 +28,8 @@ This repository outlines the current state-of-the-art Python libraries for Brain
 
 ### Research References
 - [Opposing cortical forces: Alpha slowing and sensorimotor mu acceleration during motor-related BCI training](https://doi.org/10.1371/journal.pcbi.1014112) 
-
+- [Developing a Brain-Computer Interface Game with Left-Right Motor Imagery](https://www.mdpi.com/2078-2489/14/7/354)
+- [Using Muse: Rapid Mobile Assessment of Brain Performance](https://doi.org/10.3389/fnins.2021.634147)  
 ### Multimedia Resources
 - [Inside a Brain-Chip Startup](https://www.youtube.com/watch?v=okxvk08uAwo)
 
