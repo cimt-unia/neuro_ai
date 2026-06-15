@@ -1,4 +1,6 @@
-## EEG data **4D object**: three dimensions of space and one dimension of time.
+# EEG data **4D object**
+
+## Three dimensions of space and one dimension of time.
 
 <br>
 
