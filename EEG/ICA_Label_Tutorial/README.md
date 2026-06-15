@@ -7,7 +7,7 @@
 <img width="1100" height="308" alt="image" src="https://github.com/user-attachments/assets/ddd72d8b-d621-4d6e-86c7-38e415abafa1" />
 
 
-We have two independent signals we want to recover. They are non-Gaussian—structured, not bell curves.
+We have two independent signals we want to recover. They are non-Gaussian, structured, not bell curves.
 
 ```
 Source 1 (s₁):  [ 2,  4,  6,  4,  2]    ← spiky, super-Gaussian
