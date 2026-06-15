@@ -1,19 +1,25 @@
 # EEG data **4D object**
 
-## Three dimensions of space and one dimension of time.
+<br>
+
+<img width="366" height="324" alt="image" src="https://github.com/user-attachments/assets/639e0d49-8aaa-45d1-9f1e-e3393d8fb0f7" />
+
+```
+Three dimensions of space and one dimension of time.
+```
+
 
 <br>
 
-<img width="466" height="424" alt="image" src="https://github.com/user-attachments/assets/639e0d49-8aaa-45d1-9f1e-e3393d8fb0f7" />
-
-<br>
 
 ### 1. The Two Pillars of MNE
 MNE separates your data into two distinct parts:
 1.  **The Data Array (`raw._data`):** A simple grid of numbers (Volts). It has no idea where the sensors are on the head.
 2.  **The Info/Montage (`raw.info` & `raw.get_montage()`):** The "map" that tells MNE which number belongs to which physical location $(x, y, z)$.
 
----
+
+
+<br>
 
 ### 2. The Data Shape: `(n_channels, n_times)`
 When you load your BEL 280-channel system, the raw data is stored as a NumPy array.
@@ -29,7 +35,9 @@ print(data.shape)
 
 **The Problem:** If you look at `data[0, :]`, you see a wave. But MNE doesn't know if that wave is coming from the front of the head or the back. It’s just "Row 0."
 
----
+
+
+<br>
 
 ### 3. The Montage: Giving Data a "Body"
 This is where your `BELStandardizer` and the `.gpsc` file come in. A montage is essentially a dictionary that links a **Channel Name** to a **3D Coordinate**.
@@ -41,7 +49,9 @@ In MNE, these coordinates are stored in meters relative to the center of the hea
 
 When you run `raw.set_montage(montage)`, MNE updates its internal `info` structure. It now knows that "Row 0" (E1) is located at `[0.02, 0.05, 0.08]` meters.
 
----
+
+
+<br>
 
 ### 4. Accessing Coordinates: The "First Principles" Way
 You don't need complex functions to get these; you can pull them directly from the object.
@@ -58,7 +68,9 @@ print(positions['E1'])
 # Output: array([ 0.021,  0.054,  0.089]) -> [x, y, z] in meters
 ```
 
----
+
+
+<br>
 
 ### 5. How the "Lobe Logic" Works Mathematically
 When we want to find the **Occipital** lobe, we are performing a **geometric filter**.
@@ -75,12 +87,16 @@ Imagine plotting all 280 channels on a 2D graph where the Y-axis is "Front-to-Ba
     *   High negative Y = Back of head (Occipital)
 3.  **Selection:** By taking the channels with the **most negative Y values**, we are mathematically isolating the sensors physically closest to the Inion (the back of the skull).
 
+<br>
+
 ### 6. Why Dimensions Matter for Analysis
 When you perform operations like **Average Reference** or **ICA**, MNE uses these dimensions differently:
 
 *   **Spatial Operations (e.g., Average Reference):** MNE looks at **Axis 0** (all channels at one moment in time) and calculates the mean. It treats every channel equally unless you tell it otherwise.
 *   **Temporal Operations (e.g., Filtering):** MNE looks at **Axis 1** (one channel across all time) to remove specific frequencies.
 *   **Topographic Mapping:** When you plot a "topomap," MNE takes the value from **Axis 0** and places it on a circle using the $(x, y)$ coordinates from the **Montage**. Without the montage, MNE cannot draw a brain map; it can only draw line graphs.
+
+<br>
 
 ### Summary Table
 
