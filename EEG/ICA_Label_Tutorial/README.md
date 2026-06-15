@@ -1,6 +1,6 @@
 # ICA: COMPLETE TOY EXAMPLE WITH EVERY CALCULATION
 
----
+<br>
 
 ## THE SETUP: Two Original Sources
 
@@ -18,7 +18,7 @@ Plot s₁: goes up to 6 and back down. Plot s₂: oscillates between 1 and 3.
 
 These are STATISTICALLY INDEPENDENT. Knowing s₁ tells you nothing about s₂. They have different shapes, different timing.
 
----
+<br>
 
 ## THE MIXING: How We Lose the Sources
 
@@ -75,7 +75,7 @@ X = [x₁]  =  [1.8   3.8   5.0   3.8   1.8]    ← Mic 1 recording
 
 **We have X. We DON'T have A. We DON'T have S. We want to recover S.**
 
----
+<br>
 
 ## THE SCATTER PLOT: Visualizing the Problem
 
