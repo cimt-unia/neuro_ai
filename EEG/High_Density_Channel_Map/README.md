@@ -1,7 +1,10 @@
 ## EEG data **4D object**: three dimensions of space and one dimension of time.
 
-<img width="401" height="220" alt="Carousel_FDA_Clearance" src="https://github.com/user-attachments/assets/79c54a15-8750-42c9-ba8a-6419b276e78f" />
+<br>
 
+<img width="466" height="424" alt="image" src="https://github.com/user-attachments/assets/639e0d49-8aaa-45d1-9f1e-e3393d8fb0f7" />
+
+<br>
 
 ### 1. The Two Pillars of MNE
 MNE separates your data into two distinct parts:
