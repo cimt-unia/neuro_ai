@@ -18,6 +18,13 @@ This repository outlines the current state-of-the-art Python libraries for Brain
 *   **[BciPy](https://github.com/CAMBI-tech/BciPy)**: Maintained by the CAMBI consortium, BciPy is a comprehensive library designed for research-grade BCI experiments. Following its major v2.0.0 release in August 2025, it remains the standard for Event-Related Potential (ERP) paradigms, such as P300 RSVP and Matrix Spellers [1].
     *   *Limitation:* Due to its rigid "Inquiry/Series/Trial" architectural structure, BciPy is optimized for discrete communication tasks and is generally unsuitable for continuous control applications like gaming or smooth cursor navigation [1].
 
+### 4. Brainflow
+*   **[Brainflow](https://brainflow.org/)**: A unified, high-performance library for biosignal data acquisition that connects directly to EEG hardware via Bluetooth without requiring middleware. It is the standard for real-time BCI applications in 2026 due to its minimal latency and streamlined architecture [1].
+    *   *Application:* Ideal for closed-loop systems requiring low-latency feedback (e.g., neurofeedback, Motor Imagery control). It supports direct connection to Muse 2 (`BoardIds.MUSE_2_BOARD`) and other modern devices through a single, consistent API [1].
+    *   *Key Features:* Achieves typical latencies of **< 20–50 ms** via direct BLE connection and eliminates setup complexity by removing the need for external bridge applications [1].
+
+
+
 ## Hardware
 
 | Control Type | Best Band | Frequency | Brain Region | Suitable Hardware |
