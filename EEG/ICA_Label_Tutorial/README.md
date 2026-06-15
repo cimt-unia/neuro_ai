@@ -23,7 +23,8 @@ These are STATISTICALLY INDEPENDENT. Knowing s₁ tells you nothing about s₂. 
 ## THE MIXING: How We Lose the Sources
 
 
-<img width="1092" height="492" alt="image" src="https://github.com/user-attachments/assets/ce266ca7-dc46-4777-b24b-8c4c25b8625f" />
+<img width="911" height="268" alt="image" src="https://github.com/user-attachments/assets/e041f990-e1c0-4fb5-921d-05f0b881b98c" />
+
 
 
 The mixing matrix A (unknown to us) combines the sources:
@@ -32,8 +33,6 @@ The mixing matrix A (unknown to us) combines the sources:
 A = [0.8   0.2]      Mic 1 picks up 80% of s₁ and 20% of s₂
     [0.3   0.7]      Mic 2 picks up 30% of s₁ and 70% of s₂
 ```
-<img width="1015" height="238" alt="image" src="https://github.com/user-attachments/assets/bb28ab7a-5e9c-49b3-a815-7547ea917999" />
-
 
 The mixed recordings X = A × S:
 
@@ -41,6 +40,8 @@ The mixed recordings X = A × S:
 x₁ = 0.8×s₁ + 0.2×s₂
 x₂ = 0.3×s₁ + 0.7×s₂
 ```
+<img width="1015" height="238" alt="image" src="https://github.com/user-attachments/assets/bb28ab7a-5e9c-49b3-a815-7547ea917999" />
+
 
 Let's compute every value:
 
@@ -75,9 +76,12 @@ X = [x₁]  =  [1.8   3.8   5.0   3.8   1.8]    ← Mic 1 recording
 
 **We have X. We DON'T have A. We DON'T have S. We want to recover S.**
 
+
+
 <br>
 
 ## THE SCATTER PLOT: Visualizing the Problem
+<img width="1019" height="382" alt="image" src="https://github.com/user-attachments/assets/b9f3fa94-0c6a-49db-9f0d-0c5ed8ca4bc5" />
 
 Plot x₁ vs x₂ for each time point:
 
@@ -91,7 +95,8 @@ Time 5: (1.8, 1.3)
 
 This forms a diagonal cloud of points—they're correlated. When x₁ is high, x₂ tends to be high too.
 
----
+
+<br>
 
 ## STEP 1: CENTER THE DATA
 
@@ -110,9 +115,12 @@ Centered x₂: [1.3-2.34, 3.3-2.34, 2.5-2.34, 3.3-2.34, 1.3-2.34]
 
 Now both rows have mean = 0. The data cloud is centered at the origin.
 
----
 
-## STEP 2: PCA — FIND THE ANGLE OF MAXIMUM VARIANCE (U^T)
+<br>
+
+## STEP 2: PCA, FIND THE ANGLE OF MAXIMUM VARIANCE (U^T)
+
+<img width="787" height="334" alt="image" src="https://github.com/user-attachments/assets/7abc9237-fb89-46e3-8a6f-c5a795272e03" />
 
 ### Compute the Covariance Matrix
 
@@ -220,9 +228,10 @@ X_pca = [PC1]  =  [-1.777   1.003   1.551   1.003  -1.777]
 
 **But:** PC1 is NOT either original source. It's still a mixture. PC1 has variance 2.16 (large). PC2 has variance 0.22 (small). PCA stops here. ICA does not.
 
----
 
-## STEP 3: WHITENING — SCALE TO EQUAL VARIANCE (Σ⁻¹)
+<br>
+
+## STEP 3: WHITENING: SCALE TO EQUAL VARIANCE (Σ⁻¹)
 
 ### Create the Whitening Matrix
 
@@ -252,9 +261,10 @@ Z = [0.68×(-1.777)   0.68×1.003   0.68×1.551   0.68×1.003   0.68×(-1.777)]
 
 **Now both rows have variance = 1.** The data cloud is a PERFECT CIRCLE. All correlations are removed. Every direction looks the same in terms of variance. The only remaining difference between directions is their NON-GAUSSIANITY.
 
----
 
-## STEP 4: ICA — ROTATE TO MAXIMIZE NON-GAUSSIANITY (V)
+<br>
+
+## STEP 4: ICA: ROTATE TO MAXIMIZE NON-GAUSSIANITY (V)
 
 ### The Rotation Matrix
 
@@ -346,9 +356,10 @@ Shape matches Row 1. ✓
 
 **The sources are recovered!** ICA cannot determine exact scaling or sign, but the SHAPES match perfectly.
 
----
 
-## THE COMPLETE JOURNEY — FOUR STAGES
+<br>
+
+## THE COMPLETE JOURNEY: FOUR STAGES
 
 ```
 STAGE 1: X_centered (Raw Mixed Data)
@@ -384,7 +395,7 @@ STAGE 4: S (Independent Components)
 
 ---
 
-## WHY THIS WORKS — THE CENTRAL LIMIT THEOREM
+## WHY THIS WORKS: THE CENTRAL LIMIT THEOREM
 
 At Step 4, we test different rotation angles φ:
 
@@ -394,9 +405,12 @@ At Step 4, we test different rotation angles φ:
 ICA searches for the φ that maximizes |kurtosis|. That φ isolates a source.
 
 ---
-<img width="987" height="534" alt="image" src="https://github.com/user-attachments/assets/7abc9237-fb89-46e3-8a6f-c5a795272e03" />
 
-## ONE SENTENCE PER STEP
+<br>
+
+
+
+## STEP SUMMARY
 
 **Step 1 (U^T):** "Find the diagonal direction (θ ≈ 34°) and rotate the ellipse horizontal."
 
@@ -405,3 +419,9 @@ ICA searches for the φ that maximizes |kurtosis|. That φ isolates a source.
 **Step 3 (V):** "Spin the circle. At most angles the projection looks like a bell curve. At φ ≈ 56° the projection is spiky—that's a source."
 
 **The entire algorithm:** Rotate by θ. Scale by 1/σ. Rotate by φ. Done. Two angles, two variances. That's all ICA needs.
+
+<br>
+
+
+
+<img width="992" height="392" alt="image" src="https://github.com/user-attachments/assets/ce266ca7-dc46-4777-b24b-8c4c25b8625f" />
