@@ -5,9 +5,10 @@ This repository is a cross-modal toolbox for machine learning in computational n
 **Modules included:**
 
 * **DWI:** signal exploration, tract-based feature engineering, and ML-ready extraction pipelines.
-* **EEG:** signal preprocessing introduction to cleaning EEG data using MNE sample dataset
 * **fMRI:** classical machine-learning and deep-learning examples using SVMs, MLPs, and transformers.
+* **EEG:** signal preprocessing introduction to cleaning EEG data using MNE sample dataset
 * **LFP:** essential signal time series processing, filtering techniques, statistical normalization, and spectral analysis.
+* **BCI:** state-of-the-art Python libraries for Brain-Computer Interface research, with a specific focus on real-time experimental control..
 
 
 Use this repository as a compact reference library to accelerate experimental design, compare analytical strategies, and extend workflows for your own datasets.
