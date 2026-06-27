@@ -92,12 +92,14 @@ Kurtosis = 16.2 − 3 = 13.2
 
 <br>
 
-##### How ICA Uses This
+##### EEG Components
 
-ICA tries different ways to mix the two signals. For each mix, it computes kurtosis.
 
-- Mix that gives moderate numbers → low kurtosis → skip it
-- Mix that gives extreme numbers → high kurtosis → **this is a source!**
+- Eye blinks: Super-Gaussian, positive kurtosis, leptokurtic. Sparse spikes.
+
+- Line noise (50 Hz): Sub-Gaussian, negative kurtosis, platykurtic. Like a sine wave.
+
+- Brain rhythms: Often slightly sub-Gaussian or near-Gaussian.
 
 <br>
 
