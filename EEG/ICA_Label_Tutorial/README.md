@@ -2,10 +2,6 @@
 
 <br>
 
-
-
-<br>
-
 ## STEP BY STEP SUMMARY
 
 | Step | What It Changes | Why Necessary |
@@ -13,8 +9,7 @@
 | **Centering** | Mean → 0 | Simplifies all formulas (covariance, kurtosis) |
 | **PCA Rotation** | Axes align with ellipse; variance redistributes | Removes correlations; prepares for whitening |
 | **Whitening** | Variance → 1; ellipse → circle | Forces ICA to ignore variance, focus ONLY on non-Gaussianity |
-| **ICA Rotation** | Axes align with sources | Maximizes kurtosis; CLT guarantees this isolates pure sources |
-
+| **ICA Rotation** | Axes align with sources | Maximizes absolute kurtosis; CLT guarantees this isolates pure sources |
 
 <br>
 
@@ -24,28 +19,36 @@
 
 <br>
 
+##### The Three Types
+
+```
+POSITIVE KURTOSIS  →  LEPTOKURTIC   →  Spiky (sharp peak + heavy tails)
+KURTOSIS ≈ 0       →  MESOKURTIC    →  Bell curve (pure Gaussian noise)
+NEGATIVE KURTOSIS  →  PLATYKURTIC   →  Flat (no peak, evenly spread)
+```
+
+ICA looks for ANY distribution far from zero. Both leptokurtic AND platykurtic are non-Gaussian, so both indicate a pure source.
+
+<br>
+
 ##### EEG Components
 
-
 - **Eye blinks**: Super-Gaussian, positive kurtosis, leptokurtic. Sparse spikes.
-
 - **Line noise (50/60 Hz)**: Sub-Gaussian, negative kurtosis, platykurtic. Like a sine wave.
-
 - **Brain rhythms:** Often slightly sub-Gaussian or near-Gaussian.
 
 <br>
 
 **Kurtosis**: "How big is the biggest number after you multiply everything by itself 4 times?" 
 
-- High answer = spiky source found.
-- Low answer = boring mixture, keep looking.
+- High answer (far from zero, positive OR negative) = non-Gaussian source found.
+- Near-zero answer = boring mixture, keep looking.
 
 <br>
 
 #### Simple Analogy
 
 1. The One Question Kurtosis Answers: **"Are there any unusually big numbers in this list?"**
-
 
 2. How to Answer That Question: Take each number. Multiply it by itself 4 times. Average the results. Subtract 3.
 
@@ -64,13 +67,13 @@ After the 4th power, the biggest numbers completely dominate the average. Kurtos
 
 <br>
 
-### Example 1: No Big Numbers
+### Example 1: Flat Data (Platykurtic)
 
 ```
 Data: [1.0, 0.5, 0.0, −0.5, −1.0]
 ```
 
-All numbers are small or moderate. Nothing stands out.
+These values are evenly spread from −1.0 to +1.0. No clustering in the middle. No extreme spikes. **This is flatter than a bell curve.**
 
 ```
 1.0⁴ = 1.0
@@ -83,17 +86,17 @@ Average = (1.0 + 0.06 + 0 + 0.06 + 1.0) ÷ 5 = 0.42
 Kurtosis = 0.42 − 3 = −2.58
 ```
 
-**Low kurtosis.** No extreme values. Looks like a boring bell curve.
+**Negative kurtosis = PLATYKURTIC (flat).** No extreme values. Like a uniform distribution or sine wave.
 
 <br>
 
-### Example 2: One Huge Number
+### Example 2: Spiky Data (Leptokurtic)
 
 ```
 Data: [0, 0, 0, 0, 3.0]
 ```
 
-Mostly zeros. One big spike.
+Mostly zeros (sharp peak at zero). One huge spike (heavy tail).
 
 ```
 0⁴ = 0
@@ -106,9 +109,18 @@ Average = (0 + 0 + 0 + 0 + 81.0) ÷ 5 = 16.2
 Kurtosis = 16.2 − 3 = 13.2
 ```
 
-**High kurtosis.** That one spike (3.0) became 81.0 and took over the entire average.
+**Positive kurtosis = LEPTOKURTIC (spiky).** That one spike (3.0) became 81.0 and took over the entire average.
 
+<br>
 
+### How ICA Uses This
+
+ICA tries different ways to combine the mixed signals. For each combination, it computes |kurtosis| (absolute value).
+
+- Mix that gives kurtosis near 0 → Gaussian-like → boring mixture → skip.
+- Mix that gives kurtosis far from 0 (positive OR negative) → non-Gaussian → **pure source found!**
+
+**ICA keeps trying combinations until it finds the one with the highest absolute kurtosis.**
 
 <br>
 
