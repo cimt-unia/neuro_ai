@@ -41,8 +41,9 @@ Big number 3.0:      3.0⁴ = 81.0    (explodes!)
 
 After the 4th power, the biggest numbers completely dominate the average. Kurtosis is really just measuring "how big was the biggest number?"
 
+<br>
 
-##### Example 1: No Big Numbers
+### Example 1: No Big Numbers
 
 ```
 Data: [1.0, 0.5, 0.0, −0.5, −1.0]
@@ -63,8 +64,9 @@ Kurtosis = 0.42 − 3 = −2.58
 
 **Low kurtosis.** No extreme values. Looks like a boring bell curve.
 
+<br>
 
-##### Example 2: One Huge Number
+### Example 2: One Huge Number
 
 ```
 Data: [0, 0, 0, 0, 3.0]
@@ -85,7 +87,7 @@ Kurtosis = 16.2 − 3 = 13.2
 
 **High kurtosis.** That one spike (3.0) became 81.0 and took over the entire average.
 
-
+<br>
 
 ##### How ICA Uses This
 
