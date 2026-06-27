@@ -42,14 +42,14 @@
 
 <br>
 
-#### 1. The One Question Kurtosis Answers: **"Are there any unusually big numbers in this list?"**
+#### Simple Analogy
+
+1. The One Question Kurtosis Answers: **"Are there any unusually big numbers in this list?"**
 
 
+2. How to Answer That Question: Take each number. Multiply it by itself 4 times. Average the results. Subtract 3.
 
-#### 2. How to Answer That Question: Take each number. Multiply it by itself 4 times. Average the results. Subtract 3.
-
-
-#### 3. Why Multiply 4 Times? Because multiplying by itself 4 times makes big numbers HUGE and small numbers TINY.
+3. Why Multiply 4 Times? Because multiplying by itself 4 times makes big numbers HUGE and small numbers TINY.
 
 ```
 Small number 0.5:    0.5⁴ = 0.06    (nearly disappears)
@@ -57,6 +57,10 @@ Big number 3.0:      3.0⁴ = 81.0    (explodes!)
 ```
 
 After the 4th power, the biggest numbers completely dominate the average. Kurtosis is really just measuring "how big was the biggest number?"
+
+<br>
+
+## Non-Gaussian vs Gaussian
 
 <br>
 
