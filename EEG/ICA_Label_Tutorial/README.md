@@ -1,4 +1,4 @@
-# ICA: COMPLETE TOY EXAMPLE WITH EVERY CALCULATION
+# ICA: INTRODUCTION
 
 <br>
 
@@ -18,28 +18,21 @@
 
 <br>
 
-### **Kurtosis = "how big is the biggest number after you multiply everything by itself 4 times?" High answer = spiky source found. Low answer = boring mixture, keep looking.**
+## KURTOSIS
+
+**Kurtosis**: "How big is the biggest number after you multiply everything by itself 4 times?" 
+
+- High answer = spiky source found.
+- Low answer = boring mixture, keep looking.
+
+#### 1. The One Question Kurtosis Answers: **"Are there any unusually big numbers in this list?"**
 
 
----
 
-#### The One Question Kurtosis Answers
+#### 2. How to Answer That Question: Take each number. Multiply it by itself 4 times. Average the results. Subtract 3.
 
-**"Are there any unusually big numbers in this list?"**
 
----
-
-#### How to Answer That Question
-
-Take each number. Multiply it by itself 4 times. Average the results. Subtract 3.
-
-That's it.
-
----
-
-#### Why Multiply 4 Times?
-
-Because multiplying by itself 4 times makes big numbers HUGE and small numbers TINY.
+#### 3. Why Multiply 4 Times? Because multiplying by itself 4 times makes big numbers HUGE and small numbers TINY.
 
 ```
 Small number 0.5:    0.5⁴ = 0.06    (nearly disappears)
@@ -48,9 +41,8 @@ Big number 3.0:      3.0⁴ = 81.0    (explodes!)
 
 After the 4th power, the biggest numbers completely dominate the average. Kurtosis is really just measuring "how big was the biggest number?"
 
----
 
-#### Example 1: No Big Numbers
+##### Example 1: No Big Numbers
 
 ```
 Data: [1.0, 0.5, 0.0, −0.5, −1.0]
@@ -71,9 +63,8 @@ Kurtosis = 0.42 − 3 = −2.58
 
 **Low kurtosis.** No extreme values. Looks like a boring bell curve.
 
----
 
-#### Example 2: One Huge Number
+##### Example 2: One Huge Number
 
 ```
 Data: [0, 0, 0, 0, 3.0]
@@ -94,18 +85,20 @@ Kurtosis = 16.2 − 3 = 13.2
 
 **High kurtosis.** That one spike (3.0) became 81.0 and took over the entire average.
 
----
 
-#### How ICA Uses This
+
+##### How ICA Uses This
 
 ICA tries different ways to mix the two signals. For each mix, it computes kurtosis.
 
 - Mix that gives moderate numbers → low kurtosis → skip it
 - Mix that gives extreme numbers → high kurtosis → **this is a source!**
 
-**ICA keeps trying until it finds the mix with the highest kurtosis.**
+<br>
 
+<br>
 
+# ICA: COMPLETE TOY EXAMPLE WITH EVERY CALCULATION
 
 <br>
 
