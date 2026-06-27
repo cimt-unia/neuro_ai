@@ -2,6 +2,68 @@
 
 <br>
 
+
+## FOUR STAGES
+
+```
+STAGE 1: Centered Raw Data
+  Mean = 0, Variance ≠ 1 (1.575, 0.807)
+  Shape: Tilted ellipse (~33°)
+  Status: CORRELATED (covariance ≠ 0)
+  
+        ↓  U^T: Rotate by θ ≈ 33°
+
+STAGE 2: PCA Rotated
+  Mean = 0, Variance = 2.143, 0.239
+  Shape: Ellipse aligned with axes
+  Status: UNCORRELATED but NOT independent (still mixtures)
+  PCA stops here. ICA does not.
+  
+        ↓  Σ⁻¹: Scale by 1/σ
+
+STAGE 3: Whitened
+  Mean = 0, Variance = 1, 1
+  Shape: PERFECT CIRCLE
+  All directions equal variance → must use non-Gaussianity
+  
+        ↓  V: Rotate by φ ≈ 56° (maximize |kurtosis|)
+
+STAGE 4: Independent Components
+  Mean = 0, Variance ≈ 1, 1
+  Shape: Circle rotated to align with source axes
+  Status: MAXIMALLY INDEPENDENT — Sources recovered!
+```
+
+<br>
+
+## STEP BY STEP SUMMARY
+
+| Step | What It Changes | Why Necessary |
+|------|----------------|---------------|
+| **Centering** | Mean → 0 | Simplifies all formulas (covariance, kurtosis) |
+| **PCA Rotation** | Axes align with ellipse; variance redistributes | Removes correlations; prepares for whitening |
+| **Whitening** | Variance → 1; ellipse → circle | Forces ICA to ignore variance, focus ONLY on non-Gaussianity |
+| **ICA Rotation** | Axes align with sources | Maximizes kurtosis; CLT guarantees this isolates pure sources |
+
+<br>
+
+## ICA SUMMARY
+
+1. **Centering:** "Shift to origin so mean=0, mathematical convenience for cleaner formulas."
+
+2. **PCA Rotation:** "Find the diagonal direction (θ≈33°) and rotate the ellipse horizontal — removes correlation."
+
+3. **Whitening:** "Squish the long axis and stretch the short axis until variance=1 everywhere — forces ICA to use non-Gaussianity, not variance."
+
+4. **ICA Rotation:** "Spin the circle. At most angles the projection looks like a bell curve (Gaussian). At φ≈56° the projection is spiky (non-Gaussian) — the Central Limit Theorem guarantees this isolates a pure source."
+
+**Geometric Intuition:** Center. Rotate. Scale. Rotate again. Two angles, two variances. Done.
+
+<br>
+
+
+<br>
+
 ## THE SETUP: Two Original Sources
 
 <img width="1100" height="308" alt="image" src="https://github.com/user-attachments/assets/ddd72d8b-d621-4d6e-86c7-38e415abafa1" />
