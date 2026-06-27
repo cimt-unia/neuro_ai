@@ -20,6 +20,9 @@
 
 ## KURTOSIS
 
+<img width="516" height="335" alt="image" src="https://github.com/user-attachments/assets/3aecbb81-a4d6-4587-88b9-7c93d4e2b386" />
+
+
 **Kurtosis**: "How big is the biggest number after you multiply everything by itself 4 times?" 
 
 - High answer = spiky source found.
