@@ -22,11 +22,25 @@
 
 <img width="516" height="335" alt="image" src="https://github.com/user-attachments/assets/3aecbb81-a4d6-4587-88b9-7c93d4e2b386" />
 
+<br>
+
+##### EEG Components
+
+
+- **Eye blinks**: Super-Gaussian, positive kurtosis, leptokurtic. Sparse spikes.
+
+- **Line noise (50/60 Hz)**: Sub-Gaussian, negative kurtosis, platykurtic. Like a sine wave.
+
+- **Brain rhythms:** Often slightly sub-Gaussian or near-Gaussian.
+
+<br>
 
 **Kurtosis**: "How big is the biggest number after you multiply everything by itself 4 times?" 
 
 - High answer = spiky source found.
 - Low answer = boring mixture, keep looking.
+
+<br>
 
 #### 1. The One Question Kurtosis Answers: **"Are there any unusually big numbers in this list?"**
 
@@ -90,16 +104,7 @@ Kurtosis = 16.2 − 3 = 13.2
 
 **High kurtosis.** That one spike (3.0) became 81.0 and took over the entire average.
 
-<br>
 
-##### EEG Components
-
-
-- Eye blinks: Super-Gaussian, positive kurtosis, leptokurtic. Sparse spikes.
-
-- Line noise (50 Hz): Sub-Gaussian, negative kurtosis, platykurtic. Like a sine wave.
-
-- Brain rhythms: Often slightly sub-Gaussian or near-Gaussian.
 
 <br>
 
