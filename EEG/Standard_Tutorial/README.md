@@ -1,4 +1,4 @@
-### **Summary of Key Concepts: Signal Processing in Neuroelectrophysiology**
+### **Key Concepts: Signal Processing in Neuroelectrophysiology**
 
 #### **1. Fundamentals of EEG Acquisition and Physics**
 *   **Physiological Origin:** EEG signals primarily reflect summed postsynaptic potentials from large populations of aligned pyramidal neurons, rather than action potentials from individual neurons or glial activity.
