@@ -1,15 +1,25 @@
 ### **Summary: Signal Processing in Neuroelectrophysiology**
 
+<br>
+
+
 #### **1. Fundamentals of EEG Acquisition and Physics**
+
 *   **Physiological Origin of Signals:** EEG does not measure the "output" spikes (action potentials) of individual neurons. Instead, it captures the summed postsynaptic potentials (inputs) from large populations of pyramidal neurons. For these signals to be detectable on the scalp, the neurons must be aligned in parallel and active synchronously. Glial activity and blood flow changes are not the primary sources of EEG voltage.
+
+
+
 *   **The 10–20 Electrode System:** This standard placement system uses a specific naming convention to indicate location:
     *   **Letters** denote the brain lobe (e.g., F for Frontal, T for Temporal).
     *   **Numbers** indicate lateralization: Odd numbers represent the left hemisphere, even numbers represent the right hemisphere.
     *   **"z"** denotes electrodes placed on the midline (zero distance from the center).
+
 *   **Volume Conduction and Filtering:** The skull acts as a resistive barrier to electrical currents. Due to its thickness and low conductivity, it functions as a **low-pass filter**, significantly attenuating high-frequency signals while allowing slower oscillations to pass through to the scalp sensors with less distortion.
 *   **Referencing Strategies:**
     *   **Bipolar Reference:** Calculates the voltage difference between two adjacent electrodes. This method is effective for highlighting localized activity and reducing common-mode noise but may obscure widespread patterns.
     *   **Common Average & Linked Mastoids:** Other common methods that reference all channels to an average or specific ear electrodes, respectively.
+
+<br>
 
 #### **2. Linear Filtering and Time Series Analysis**
 *   **Fourier Transform Properties:** The Fourier Transform is a reversible mathematical operation. It converts a time-domain signal into the frequency domain without losing information. Consequently, the original time-domain signal can be perfectly reconstructed from its frequency components, ensuring no data destruction occurs during transformation.
@@ -21,6 +31,8 @@
     *   **Dilation:** Dilation introduces gaps between the kernel weights. This allows the filter to cover a wider receptive field (capture broader context) without increasing the number of parameters or computational cost.
     *   **Padding:** Zero-padding is added to the edges of the input signal before convolution. This ensures that the output signal maintains the same spatial dimensions as the input, preventing data loss at the boundaries.
 
+<br>
+
 #### **3. Feature Engineering and Spectral Analysis**
 *   **Spectral Leakage:** In the Discrete Fourier Transform (DFT), spectral leakage occurs when the analysis window does not contain an integer number of signal cycles. This abrupt cutoff creates a discontinuity, causing signal energy to "smear" or leak into adjacent frequency bins, distorting the true spectral content. Windowing functions (like Hann) are often used to mitigate this.
 *   **The Heisenberg-Gabor Limit (Time-Frequency Trade-off):** There is an inverse relationship between time and frequency resolution:
@@ -31,6 +43,8 @@
     *   **Raw Voltage Challenges:** Using raw time-domain samples is problematic due to high dimensionality and extreme sensitivity to phase shifts. A millisecond shift in a wave can completely change the raw voltage values, confusing machine learning models.
     *   **Spectrograms:** Unlike static band power, spectrograms provide a time-frequency representation. They are essential for analyzing non-stationary signals where frequency content changes rapidly over time, allowing models to detect transient events.
     *   **Data Leakage:** Using heavily overlapping windows for training and testing can cause data leakage. The model may learn to recognize shared noise or artifacts between overlapping segments rather than generalizable physiological patterns, leading to inflated performance metrics.
+
+<br>
 
 #### **4. Independent Component Analysis (ICA)**
 *   **Physical Interpretation of the Mixing Matrix:** In the ICA model $X = AS$, the mixing matrix $A$ represents **volume conduction**. It maps how electrical activity from a single independent source (brain or artifact) spreads instantaneously through the head’s tissues to reach all scalp electrodes.
