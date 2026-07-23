@@ -13,6 +13,6 @@ This repository is a cross-modal toolbox for machine learning in computational n
 
 Use this repository as a compact reference library to accelerate experimental design, compare analytical strategies, and extend workflows for your own datasets.
 
----
+<img width="500" height="281" alt="image" src="https://github.com/user-attachments/assets/b22a52cc-b2d4-4c1d-9ed3-94729afd9aac" />
 
 
